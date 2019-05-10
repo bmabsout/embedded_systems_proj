@@ -1,0 +1,7 @@
+# Compile command:
+
+/* 1. Compile CRC converter */
+gcc -I.. -g -Wall -c -o pc_crc16.o pc_crc16.c
+
+/* 2. Compile the main library to shared object file */
+gcc -Wall -fPIC -shared -o final_server.so pc_crc16.o final_server.c
